@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.games.controls.LetterTextField?>
+
+<BorderPane fx:id="bdPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.76-ea" fx:controller="org.games.hangman.GUIController">
+
+<top>
+    <BorderPane>
+        <top>
+            <VBox>
+                <MenuBar>
+                    <menus>
+                        <Menu text = "Option">
+                            <items>
+                                <MenuItem onAction="#handleNewGame" text="New Game" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </VBox>
+        </top>
+        <center>
+            <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0">
+                <children>
+                    <Label alignment="BOTTOM_LEFT" style="-fx-padding: 10px;" text="Entered:">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+                    <TextField fx:id="txtEntered" disable="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                    <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-padding: 10px;" text="New character:" textOverrun="CLIP">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+                    <LetterTextField fx:id="txtInput" prefWidth="100" />
+                </children>
+            </HBox>
+        </center>
+    </BorderPane>
+</top>
+<center>
+    <Canvas fx:id="canvas" height="320" width="500" />
+</center>
+
+</BorderPane>
