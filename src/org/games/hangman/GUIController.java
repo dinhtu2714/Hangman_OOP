@@ -7,12 +7,8 @@ import javafx.geometry.VPos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputEvent;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Material;
 import javafx.scene.shape.ArcType;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -26,9 +22,8 @@ public class GUIController implements Initializable {
 
     private static final Font fontLarge = Font.font("Droid Sans", FontWeight.BOLD, 35);
     private static final Font fontWord = Font.font("Courier New", FontWeight.BOLD, 20);
-
     @FXML
-    BorderPane bdPane;
+    AnchorPane acPane;
     @FXML
     private LetterTextField txtInput;
     @FXML
